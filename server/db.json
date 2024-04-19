@@ -1,0 +1,74 @@
+{
+  "products": [
+    {
+      "id": "100",
+      "name": "OPPO Mobile",
+      "price": 10000,
+      "quantity": 3,
+      "img": "assets/img/a98-5g-480x480-blue.png.thumb.webp",
+      "catId": 2
+    },
+    {
+      "id": "200",
+      "name": "Samsung Mobile",
+      "price": 14000,
+      "quantity": 1,
+      "img": "assets/img/a98-5g-480x480-blue.png.thumb.webp",
+      "catId": 2
+    },
+    {
+      "id": "400",
+      "name": "Lenovo Tablet",
+      "price": 3000,
+      "quantity": 4,
+      "img": "assets/img/shopping.webp",
+      "catId": 3
+    },
+    {
+      "id": "500",
+      "name": "Dell laptop",
+      "price": 15000,
+      "quantity": 6,
+      "img": "assets/img/shopping (1).webp",
+      "catId": 1
+    },
+    {
+      "id": "600",
+      "name": "Lenovo laptop",
+      "price": 25000,
+      "quantity": 1,
+      "img": "assets/img/shopping (1).webp",
+      "catId": 1
+    },
+    {
+      "id": "300",
+      "name": "Huawei Tablet",
+      "price": 2000,
+      "quantity": 2,
+      "img": "assets/img/shopping.webp",
+      "catId": 3
+    },
+    {
+      "id": "500",
+      "name": "Lenovo Tablet",
+      "price": 8000,
+      "quantity": 3,
+      "img": "assets/img/shopping.webp",
+      "catId": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Laptop"
+    },
+    {
+      "id": "2",
+      "name": "Mobile"
+    },
+    {
+      "id": "3",
+      "name": "Tablet"
+    }
+  ]
+}

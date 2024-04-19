@@ -1,0 +1,12 @@
+<img [src]="Product?.img">
+<h1> Name : {{Product?.name}}</h1>
+<p>Price : {{Product?.price}}</p>
+
+<p>Quantity : {{Product?.quantity}}</p>
+
+<button class="btn btn-primary"  (click)="goBack()">Bakc</button>
+
+<div class="btns my-5  ">
+    <button class="btn btn-danger  mx-5" [disabled]="currentId==idsArr[0]" (click)="prev()">Prev</button>
+    <button class="btn btn-success" [disabled]="currentId==idsArr[idsArr.length-1]" (click)="next()">Next</button>
+</div>

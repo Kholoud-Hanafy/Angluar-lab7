@@ -1,0 +1,47 @@
+<h1>{{prdName.errors | json}}</h1>
+
+<form (submit)="addNewProduct()" #addprd ="ngForm">
+    <label for="productName">Name:</label>
+    <input type="text" [(ngModel)]="newProduct.name" id="productName" name="name" required
+    pattern="^[a-zA-Z]{3,15}$"
+    #prdName ="ngModel">
+    <!-- @if(prdName.invalid &&  prdName.touched){
+    <div style="color: red;">
+        @if(prdName.errors?.['required']){
+        <p>Name is required</p>}
+        @if(prdName.errors?.['pattern']){
+        <p>Name must be at least 3  character</p>}
+    </div>
+    }
+ -->
+ @if(prdName.invalid && prdName.touched){
+    <div style="color: red;">
+        @if(prdName.errors?.['required']){
+            <p>Name is required</p>
+        }
+        @if(prdName.errors && prdName.errors['pattern']){
+            <p>Name must be at least 3 characters</p>
+        }
+    </div> 
+}
+
+    
+    <label for="productPrice">Price:</label>
+    <input type="number" [(ngModel)]="newProduct.price" id="productPrice" name="price" min="0" step="0.01" required>
+
+    <label for="productQuantity">Quantity:</label>
+    <input type="number" [(ngModel)]="newProduct.quantity" id="productQuantity" name="quantity" min="0" required>
+
+    <label for="productImage">Image:</label>
+    <input type="file"  [(ngModel)]="newProduct.img" id="productImage" name="img" accept="image/*" required>
+
+    <label for="productCategory">Category:</label>
+    <select id="productCategory" name="productCategory" required    [(ngModel)]="newProduct.catId">
+    
+        @for (cat of categories; track cat.id) {
+        <option [value]="cat.id">{{cat.name}}</option>
+        }
+    </select>
+   <button class="btn" [disabled]="addprd.invalid">Submit</button>
+    <!-- <input type="submit" value="Submit" [disabled]="addprd.invalid"> -->
+</form>

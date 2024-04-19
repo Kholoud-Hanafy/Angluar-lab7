@@ -1,0 +1,44 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink = "/Home" routerLinkActive = "active bg-info">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "/About" routerLinkActive = "active bg-info " >About Us </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "/Products"  routerLinkActive = "active  bg-info ">Products </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "/Login"  routerLinkActive = "active  bg-info ">
+               <span *ngIf="!isUserLoggedIn">Login</span>
+               <span *ngIf="isUserLoggedIn">Logout</span>
+
+               </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "/AddProduct"  routerLinkActive = "active  bg-info ">AddProduct </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink = "/Register"  routerLinkActive = "active  bg-info ">Register </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink = "/Login"  routerLinkActive = "active  bg-info ">logout </a>
+          </li> -->
+ 
+
+        </ul>
+        
+      </div>
+    </div>
+  </nav>

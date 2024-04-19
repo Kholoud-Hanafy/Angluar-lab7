@@ -1,0 +1,32 @@
+<div class="mb-3">
+    <select class="form-select" aria-label="Default select example" [(ngModel)] = "selectedCatId">
+      <option [value]="0" selected>All</option>
+        <option [value]="cat.id" *ngFor="let cat of categories">{{cat.name}}</option>
+        
+      </select>
+</div>
+
+<div class="child">
+
+    <app-product [recivedCatId] = "selectedCatId"  (onBuyProduct)="recivedProducts($event)"></app-product>
+</div>
+
+<!-- <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Count</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col"><button type="button" class="btn btn-danger">Remove</button></th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor ="let item of  orderedProducts">
+      <td scope="row">{{ item.count }}</td>
+      <td>{{ item.product.name }}</td>
+      <td>{{ item.product.price }}</td>
+      <td><button type="button" class="btn btn-danger" (click)="delete(item)">Remove</button></td>
+    </tr>
+    
+  </tbody>
+</table> -->

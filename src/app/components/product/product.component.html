@@ -1,0 +1,34 @@
+
+
+
+
+
+<div class="row">
+  @for(product of  filteredProducts; track product.id ; let i = $index){
+        <div class="col-lg-4 my-5" >
+            <div class="card" style="width: 18rem;"   appProductcards="gray" externalColor ="pink" >
+                <img [src]="product.img" class="card-img-top" alt="...">
+                
+                <div class="card-body"  >
+                  <h5 class="card-title">{{i+1}} {{product.name}}</h5>
+                  <p class="card-text">Pric :{{product.price}}</p>
+                  <p class="card-text">Quantity : {{product.quantity}}</p>
+                  <!-- <input type="number" #countInput>
+                  <a href="#" class="btn btn-success" (click)="buy(countInput.value,product)">Buy</a> -->
+                  <!-- <a href="#" class="btn btn-primary" [routerLink] = "['/Details', product.id]">Details</a> -->
+                  
+                  <a  class="btn btn-primary" (click)="navigatToDetails(product.id)">Details</a>
+                  <a  class="btn btn-danger mx-3" (click)="deletePrd(product.id)">Delete</a>
+                  <a  class="btn btn-success my-2 "   (click)="navigatToUpdate(product.id)" >Update</a>
+                  
+                </div>
+
+              </div>
+        </div>}@empty {
+        <h1>Products Not found </h1>
+      }
+
+   </div>
+
+    
+   
